@@ -1,4 +1,5 @@
-require(['Models/User', 'Controllers/ListController'], function(User, ListController){
+require(['Models/User', 'Controllers/ListController', 'Controllers/AddController' ], 
+	function(User, ListController,AddController){
 
 	var users = [ 	new User('Vasya'),
 					new User('Misha'),
@@ -10,6 +11,8 @@ require(['Models/User', 'Controllers/ListController'], function(User, ListContro
 
 	localStorage.users = JSON.stringify(users);
 
-	ListController.start();
+	//ListController.start();
+
+	AddController.start();
 
 });
